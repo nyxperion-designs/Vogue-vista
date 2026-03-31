@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VogueVista - Trending Fashion Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        .glass-effect { backdrop-filter: blur(20px); }
+        .fade-in { animation: fadeIn 0.8s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .product-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .product-hover:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
+        .custom-cursor { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><circle cx='16' cy='16' r='8' fill='%23ff6b6b' opacity='0.8'/></svg>") 16 16, auto; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen">
+
+    <!-- Header -->
+    <header class="glass-effect bg-white/80 sticky top-0 z-50 border-b border-slate-200/50 backdrop-blur-xl">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <i class="fas fa-gem text-white text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-gray-900 to-slate-700 bg-clip-text text-transparent">VogueVista</h1>
+                    <p class="text-xs text-slate-500 font-medium">Trending Fashion Hub</p>
+                </div>
+            </div>
+
+            <!-- Search & Actions -->
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search trending styles..." 
+                           class="w-64 pl-12 pr-4 py-3 bg-white/70 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400"></i>
+                </div>
+                <button class="p-3 text-slate-600 hover:text-pink-500 hover:bg-pink-50 rounded-xl transition-all duration-300">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button class="p-3 text-slate-600 hover:text-pink-500 hover:bg-pink-50 rounded-xl transition-all duration-300">
+                    <i class="fas fa-shopping-bag"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-20 fade-in">
+            <h2 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-slate-800 to-black bg-clip-text text-transparent mb-6 leading-tight">
+                Discover Trending<br><span class="text-transparent bg-gradient-to-r from-pink-500 via-rose-500 to-orange-500 bg-clip-text">Fashion</span>
+            </h2>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">Curated collection of the hottest fashion trends from top brands worldwide. Click to shop the look!</p>
+        </div>
+
+        <!-- Featured Categories -->
+        <div class="grid md:grid-cols-4 gap-6 mb-20">
+            <div class="group cursor-pointer p-8 rounded-3xl bg-white/70 backdrop-blur-xl border border-slate-200 hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 hover:bg-white">
+                <i class="fas fa-crown text-4xl text-amber-500 mb-4"></i>
+                <h3 class="text-2xl font-bold text-slate-900 mb-2">Streetwear</h3>
+                <p class="text-slate-600">Urban edge meets luxury</p>
+            </div>
+            <div class="group cursor-pointer p-8 rounded-3xl bg-white/70 backdrop-blur-xl border border-slate-200 hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 hover:bg-white">
+                <i class="fas fa-palette text-4xl text-pink-500 mb-4"></i>
+                <h3 class="text-2xl font-bold text-slate-900 mb-2">Designer</h3>
+                <p class="text-slate-600">High fashion collections</p>
+            </div>
+            <div class="group cursor-pointer p-8 rounded-3xl bg-white/70 backdrop-blur-xl border border-slate-200 hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 hover:bg-white">
+                <i class="fas fa-snowflake text-4xl text-blue-500 mb-4"></i>
+                <h3 class="text-2xl font-bold text-slate-900 mb-2">Winter 2024</h3>
+                <p class="text-slate-600">Cozy luxury essentials</p>
+            </div>
+            <div class="group cursor-pointer p-8 rounded-3xl bg-white/70 backdrop-blur-xl border border-slate-200 hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 hover:bg-white">
+                <i class="fas fa-fire text-4xl text-orange-500 mb-4"></i>
+                <h3 class="text-2xl font-bold text-slate-900 mb-2">Hot Right Now</h3>
+                <p class="text-slate-600">Viral fashion drops</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="px-6 pb-20 max-w-7xl mx-auto">
+        <div class="text-center mb-16 fade-in">
+            <h3 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Featured Picks</h3>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto">Click any product to shop directly from the source</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Product 1 -->
+            <a href="https://www.ssense.com/en-us/women/designers/prada" target="_blank" 
+               class="product-hover group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-slate-200 custom-cursor">
+                <div class="h-64 bg-gradient-to-br from-pink-500 to-rose-500 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1574251150890-b4d2adfde4e9?w=400&h=400&fit=crop&crop=center" 
+                         alt="Prada Bag" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-sm font-semibold text-slate-800">🔥 Trending</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl text-slate-900 mb-2 line-clamp-1">Prada Nylon Shoulder Bag</h4>
+                    <p class="text-slate-600 mb-3">$2,450</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-pink-600 font-semibold">SSENSE</span>
+                        <i class="fas fa-arrow-right text-slate-400 group-hover:text-pink-500 transition-colors"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Product 2 -->
+            <a href="https://www.farfetch.com/shopping/women/gucci/items.aspx" target="_blank" 
+               class="product-hover group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-slate-200 custom-cursor">
+                <div class="h-64 bg-gradient-to-br from-green-500 to-emerald-600 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop&crop=center" 
+                         alt="Gucci Loafers" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl text-slate-900 mb-2 line-clamp-1">Gucci Horsebit Loafers</h4>
+                    <p class="text-slate-600 mb-3">$890</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-emerald-600 font-semibold">Farfetch</span>
+                        <i class="fas fa-arrow-right text-slate-400 group-hover:text-emerald-500 transition-colors"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Product 3 -->
+            <a href="https://www.nike.com/w/womens-lifestyle-shoes-37v7j" target="_blank" 
+               class="product-hover group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-slate-200 custom-cursor">
+                <div class="h-64 bg-gradient-to-br from-orange-500 to-red-500 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop&crop=center" 
+                         alt="Nike Air Force" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl text-slate-900 mb-2 line-clamp-1">Nike Air Force 1 '07</h4>
+                    <p class="text-slate-600 mb-3">$120</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-orange-600 font-semibold">Nike</span>
+                        <i class="fas fa-arrow-right text-slate-400 group-hover:text-orange-500 transition-colors"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Product 4 -->
+            <a href="https://www.zara.com/us/en/woman-trending-l1594.html" target="_blank" 
+               class="product-hover group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-slate-200 custom-cursor">
+                <div class="h-64 bg-gradient-to-br from-purple-500 to-violet-600 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1598033124236-39c7f919b557?w=400&h=400&fit=crop&crop=center" 
+                         alt="Zara Dress" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl text-slate-900 mb-2 line-clamp-1">Zara Satin Slip Dress</h4>
+                    <p class="text-slate-600 mb-3">$89</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-purple-600 font-semibold">Zara</span>
+                        <i class="fas fa-arrow-right text-slate-400 group-hover:text-purple-500 transition-colors"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Product 5 -->
+            <a href="https://www.adidas.com/us/originals" target="_blank" 
+               class="product-hover group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-slate-200 custom-cursor">
+                <div class="h-64 bg-gradient-to-br from-blue-500 to-indigo-600 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&crop=center" 
+                         alt="Adidas Samba" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl text-slate-900 mb-2 line-clamp-1">Adidas Samba OG</h4>
+                    <p class="text-slate-600 mb-3">$100</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-blue-600 font-semibold">Adidas</span>
+                        <i class="fas fa-arrow-right text-slate-400 group-hover:text-blue-500 transition-colors"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Product 6 -->
+            <a href="https://www.revolve.com/dresses/br/new" target="_blank" 
+               class="product-hover group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-slate-200 custom-cursor">
+                <div class="h-64 bg-gradient-to-br from-rose-500 to-pink-500 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1588740127726-1649bd7dd6e4?w=400&h=400&fit=crop&crop=center" 
+                         alt="Revolve Dress" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-6">
+                    <h4 class="font-bold text-xl text-slate-900 mb-2 line-clamp-1">Free People Movement Dress</h4>
+                    <p class="text-slate-600 mb-3">$148</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-rose-600 font-semibold">Revolve</span>
+                        <i class="fas fa-arrow-right text-slate-400 group-hover:text-rose-500 transition-colors"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-slate-900 to-gray-900 text-white py-16 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="text-2xl font-bold mb-6 flex items-center space-x-3">
+                    <i class="fas fa-gem text-pink-400"></i>
+                    <span>VogueVista</span>
+                </h3>
+                <p class="text-slate-400 leading-relaxed">Your gateway to the world's most exciting fashion trends. Shop with confidence from trusted retailers.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-slate-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Streetwear</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Designer</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">New Arrivals</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Best Sellers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-6">Brands</h4>
+                <ul class="space-y-3 text-slate-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Prada</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Gucci</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Nike</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Zara</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-6">Stay Updated</h4>
+                <p class="text-slate-400 mb-4">Get the latest drops in your inbox</p>
+                <div class="flex">
+                    <input type="email" placeholder="your@email.com" 
+                           class="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-l-xl backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-pink-500">
+                    <button class="px-8 py-3 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 rounded-r-xl font-semibold transition-all duration-300">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-slate-800 mt-12 pt-8 text-center text-slate-500">
+            <p>&copy; 2024 VogueVista. Curated fashion discovery platform. All rights reserved.</p
